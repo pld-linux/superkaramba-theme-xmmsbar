@@ -19,26 +19,25 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 xmmsbar theme for superkaramba.
 
 %description -l pl
-Motyw xmmsbar do superkaramba.
+Motyw xmmsbar do superkaramby.
 
 %prep
 %setup -q -c
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/pics  \
     	$RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/pics/.xvpics
 
-install xmmsbar/*.theme $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/
-cp -a xmmsbar/*.py $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/
-%py_comp $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/
-%py_ocomp $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/
+install xmmsbar/*.theme $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar
+cp -a xmmsbar/*.py $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar
+%py_comp $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar
+%py_ocomp $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar
 rm -f $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/*.py
-install xmmsbar/pics/*.png $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/pics/
-install xmmsbar/pics/*.xcf $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/pics/
-install xmmsbar/pics/.xvpics/*.png $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/pics/.xvpics/
-install xmmsbar/pics/.xvpics/*.xcf $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/pics/.xvpics/
+install xmmsbar/pics/*.png $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/pics
+install xmmsbar/pics/*.xcf $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/pics
+install xmmsbar/pics/.xvpics/*.png $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/pics/.xvpics
+install xmmsbar/pics/.xvpics/*.xcf $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/pics/.xvpics
 
 %clean
 rm -rf $RPM_BUILD_ROOT
