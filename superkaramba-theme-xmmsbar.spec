@@ -5,7 +5,7 @@ Summary:	superkaramba - xmmsbar theme
 Summary(pl):	superkaramba - motyw xmmsbar
 Name:		superkaramba-theme-%{theme}
 Version:	1
-Release:	0.1
+Release:	0.2
 License:	GPL 
 Group:		Themes
 Source0:	5882-xmmsbar-0.3.tar.gz
@@ -31,8 +31,10 @@ install -d $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/pics  \
     	$RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/pics/.xvpics
 
 install xmmsbar/*.theme $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/
-install xmmsbar/*.py $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/
-install xmmsbar/*.pyc $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/
+cp -a xmmsbar/*.py $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/
+%py_comp $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/
+%py_ocomp $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/
+rm -f $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/*.py
 install xmmsbar/pics/*.png $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/pics/
 install xmmsbar/pics/*.xcf $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/pics/
 install xmmsbar/pics/.xvpics/*.png $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xmmsbar/pics/.xvpics/
@@ -47,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/themes/superkaramba/xmmsbar/pics
 %dir %{_datadir}/themes/superkaramba/xmmsbar/pics/.xvpics
 %{_datadir}/themes/superkaramba/xmmsbar/*.theme
-%{_datadir}/themes/superkaramba/xmmsbar/*.py
+%{_datadir}/themes/superkaramba/xmmsbar/*.pyo
 %{_datadir}/themes/superkaramba/xmmsbar/*.pyc
 %{_datadir}/themes/superkaramba/xmmsbar/pics/*.png
 %{_datadir}/themes/superkaramba/xmmsbar/pics/*.xcf
