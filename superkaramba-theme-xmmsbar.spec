@@ -12,6 +12,7 @@ Source0:	5882-xmmsbar-0.3.tar.gz
 # Source0-md5:	47d0c28ff83c6d394814ea070233b208
 URL:		http://www.kde-look.org/content/show.php?content=5882
 Requires:	superkaramba
+Requires:	xmmsctrl
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
