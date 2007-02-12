@@ -2,7 +2,7 @@
 %define		theme	xmmsbar
 
 Summary:	superkaramba - xmmsbar theme
-Summary(pl.UTF-8):   superkaramba - motyw xmmsbar
+Summary(pl.UTF-8):	superkaramba - motyw xmmsbar
 Name:		superkaramba-theme-%{theme}
 Version:	1
 Release:	0.4
